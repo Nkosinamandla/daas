@@ -1,0 +1,654 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: transparent;
+}
+
+header .hamburger {
+  padding: 70px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 60;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+header .hamburger span {
+  width: 30px;
+  height: 3px;
+  background: transparent;
+  position: absolute;
+}
+
+header .hamburger span::before {
+  border-radius: 20px;
+  border: none;
+  right: -15px;
+  height: 5px;
+  width: 21px;
+  background-color: #ffffff;
+  content: "";
+  position: absolute;
+  top: 4px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+header .hamburger span::after {
+  border-radius: 20px;
+  border: none;
+  right: -15px;
+  height: 5px;
+  width: 45px;
+  background-color: #ffffff;
+  content: "";
+  position: absolute;
+  top: -7px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+header .open span {
+  background: #ffffff;
+}
+
+header .open span::before {
+  width: 45px;
+  top: 5px;
+  background-color: black;
+  -webkit-transform: rotate(495deg);
+          transform: rotate(495deg);
+}
+
+header .open span::after {
+  width: 45px;
+  top: 5px;
+  background-color: black;
+  -webkit-transform: rotate(-495deg);
+          transform: rotate(-495deg);
+}
+
+header .menu {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  background: #ffffff;
+  max-width: 100%;
+  height: 0;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 25;
+}
+
+header .menu ul li a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 27px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: block;
+  font-family: "mont-med";
+  padding-bottom: 22px;
+}
+
+header .change {
+  max-width: 100%;
+  height: 100%;
+}
+
+.hero {
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+}
+
+.hero #vid {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+}
+
+.hero .hero-inner {
+  height: 100%;
+}
+
+.logo {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 50%;
+}
+
+.text {
+  position: absolute;
+  color: white;
+  padding: 0px 0px 53px 16px;
+  bottom: 124px;
+}
+
+.text h1 {
+  font-size: 40px;
+  font-family: "mont-reg";
+  padding-bottom: 27px;
+}
+
+.text p {
+  font-family: "mont-med";
+  font-size: 20px;
+}
+
+.about {
+  position: relative;
+  width: 100%;
+}
+
+.about h2 {
+  font-size: 40px;
+  font-family: "mont-reg";
+  padding: 0px 0px 30px 0;
+}
+
+.about p {
+  font-size: 18px;
+  font-family: "mont-light";
+  padding-top: 12px;
+  padding-bottom: 62px;
+}
+
+.info {
+  font-family: "mont-light";
+}
+
+.info p {
+  font-family: "mont-med";
+  padding: 30px 0px;
+}
+
+.data-sets h3 {
+  font-family: "mont-med";
+  font-size: 18px;
+  padding: 5px 0px 10px 0;
+  line-height: 1.5em;
+}
+
+.data-sets h2 {
+  font-family: "mont-reg";
+  font-size: 20px;
+  padding: 10px 0px 30px 0;
+}
+
+.data-sets p {
+  font-family: "mont-light";
+  font-size: 18px;
+  padding: 10px 0 30px 0;
+}
+
+.all-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.all-cards #car {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.all-cards #car .card-title {
+  color: white;
+  font-family: 'mont-med';
+  font-size: 51px;
+}
+
+.all-cards #car .card-text {
+  color: white;
+  font-family: "mont-light";
+  padding: 9px;
+  font-size: 18px;
+}
+
+.vices {
+  margin: 20px 0;
+}
+
+.vices .vices-inner {
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.vices .vices-inner h2 {
+  font-size: 35px;
+  color: grey;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  font-family: "mont-med";
+}
+
+.vices .vices-inner h3 {
+  margin-top: 30px;
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-family: "mont-med";
+}
+
+.vices .vices-inner p {
+  font-size: 16px;
+  font-family: "mont-light";
+}
+
+.vices .image img {
+  width: 100%;
+}
+
+.projects .proj {
+  margin: 130px 0 40px 0;
+}
+
+.projects .proj h2 {
+  font-size: 35px;
+  font-family: "mont-med";
+}
+
+.projects .proj h4 {
+  font-size: 28px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: "mont-med";
+}
+
+.projects .proj p {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-family: "mont-light";
+}
+
+.projects .proj .line {
+  position: relative;
+}
+
+.projects .proj .line a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-family: "mont-light";
+}
+
+.projects .proj .line li {
+  margin-top: 5px;
+  list-style: none;
+  width: 175px;
+  background-color: black;
+  height: 2px;
+}
+
+.projects .img img {
+  width: 100%;
+  margin-top: 102px;
+}
+
+.in-touch {
+  margin-bottom: 60px;
+}
+
+.in-touch .in-touch-inner h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "mont-med";
+}
+
+.in-touch .in-touch-inner .touch1 p {
+  font-size: 20px;
+  font-family: "mont-light";
+}
+
+.in-touch .in-touch-inner .touch1 h4 {
+  margin-top: 5px;
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-family: "mont-med";
+}
+
+.in-touch .in-touch-inner .touch2 p {
+  font-size: 20px;
+  font-family: "mont-light";
+}
+
+.in-touch .in-touch-inner .touch2 h4 {
+  margin-top: 5px;
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-family: "mont-med";
+}
+
+.in-touch .in-touch-inner .touch3 p {
+  font-size: 20px;
+  font-family: "mont-light";
+}
+
+.in-touch .in-touch-inner .touch3 li {
+  list-style: none;
+  margin-top: 5px;
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-family: "mont-med";
+}
+
+.in-touch .form {
+  width: 97%;
+}
+
+.in-touch .form h2 {
+  font-size: 35px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-family: "mont-med";
+}
+
+.in-touch .form form {
+  font-family: "mont-light";
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.in-touch .form form input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.in-touch .form form textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.in-touch .form form button {
+  background: grey;
+  font-size: 20px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  margin: 15px auto;
+}
+
+.in-touch .form form button:hover {
+  background: cadetblue;
+}
+
+footer {
+  margin-top: 30px;
+  width: 100%;
+}
+
+footer .f-image {
+  width: 55%;
+  margin: 0 auto;
+  left: 25%;
+}
+
+footer .f-image img {
+  width: 64%;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .foot {
+  width: 100%;
+}
+
+footer .foot ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 25px;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+footer .foot ul li {
+  text-decoration: none;
+  padding: 3px;
+}
+
+footer .foot ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+footer .logo-f {
+  padding-top: 12px;
+}
+
+@media (min-width: 568px) {
+  .logo {
+    width: 24%;
+  }
+  .text {
+    bottom: 53px;
+  }
+  header .hamburger {
+    top: -31px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .f-image {
+    width: 30%;
+  }
+  footer .f-image img {
+    width: 100%;
+  }
+  footer .foot ul {
+    width: 100%;
+    padding-top: 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer .foot ul li a {
+    font-family: "mont-reg";
+    font-size: 20px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 29%;
+  }
+  .text {
+    padding: 0px 72px 23px 70px;
+    bottom: 237px;
+  }
+  .text h1 {
+    font-size: 81px;
+  }
+  .text p {
+    font-size: 32px;
+    width: 70%;
+  }
+  .hero {
+    height: 85vh;
+  }
+  .hero #vid {
+    height: 80vh;
+  }
+  .all-cards #car {
+    width: 90%;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 20%;
+    height: auto;
+  }
+  .text .text {
+    bottom: 276px;
+  }
+  .text h1 {
+    font-size: 60px;
+  }
+  .text p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text {
+    width: 65%;
+    padding: 100px 50px 277px 100px;
+    bottom: 13px;
+  }
+  .text p {
+    font-size: 20px;
+    font-family: "mont-med";
+  }
+  .text h1 {
+    font-size: 60px;
+  }
+  .logo {
+    width: 15%;
+    bottom: -184px;
+    margin-right: 77px;
+  }
+  .hero {
+    height: 100vh;
+  }
+  .hero #vid {
+    height: 100vh;
+  }
+  .hero .logo {
+    bottom: 40px;
+  }
+  .h-about {
+    padding: 285px 45px 0px 11px;
+  }
+  .info {
+    padding-top: 105px;
+  }
+  .about h2 {
+    padding: 43px 0px 18px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

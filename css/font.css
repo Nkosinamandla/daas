@@ -1,0 +1,16 @@
+@font-face {
+    font-family:"mont" ;
+    src: url(../css/font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family:"mont-reg";
+    src: url(../css/font/Montserrat-Black.ttf);
+}
+@font-face {
+    font-family: "mont-light";
+    src: url(../css/font/Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: "mont-med";
+    src: url(../css/font/Montserrat-Medium.ttf);
+}

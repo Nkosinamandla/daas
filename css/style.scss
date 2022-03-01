@@ -1,0 +1,417 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ body {
+line-height: 1;
+ }
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+
+}
+header{ display: flex;  align-items: center; justify-content: space-between; background: transparent;  
+
+	.hamburger{ padding: 70px; position: absolute; right: 0; top: 20px;  z-index: 60; transition: all 0.7s ease;
+
+		span{ width: 30px; height: 3px;  background: transparent;position: absolute;
+		
+			&::before{ border-radius: 20px; border: none; right: -15px; height: 5px; width: 21px; background-color: #ffffff; content: ""; position: absolute; top: 4px; transition: all 0.7s}
+			&::after{ border-radius: 20px ;border: none; right: -15px; height: 5px; width: 45px; background-color: #ffffff; content: ""; position: absolute; top: -7px; transition: all 0.7s ease; }
+		}
+	}
+	.open{ 
+
+span{ background: #ffffff;
+&::before { width: 45px; top: 5px; background-color: black; transform: rotate(495deg);}
+&::after{ width: 45px; top: 5px; background-color: black; transform: rotate(-495deg);}
+}
+
+	}
+	
+	.menu{ width: 100%; position: absolute;  overflow: hidden; background: #ffffff; max-width: 100%; height: 0; right: 0; top: 0; display: flex; flex-direction: column; margin: 0 auto; justify-content: center; z-index: 25;
+
+		ul{ 
+			li{
+				a{ text-decoration: none; color: black; text-align: center; margin: 0 auto; font-size: 27px;flex-direction: column; display: block;font-family: "mont-med"; padding-bottom: 22px;}
+			}
+		}
+
+	}
+	.change{ max-width: 100%; height: 100%;
+	}
+
+	
+}
+
+
+
+
+
+.hero{   height: 100vh; z-index: 1; position: relative;
+	#vid{ object-fit: cover; width: 100%; height: 100%; position: absolute; height: 100vh; left: 0; }
+	.hero-inner{
+		height: 100%;
+	}
+
+}
+.logo{
+	position: absolute;bottom: 0px;right: 0;width: 50%;
+}
+.text{
+	position: absolute;color: white;padding: 0px 0px 53px 16px;bottom: 124px;
+	h1{
+		font-size: 40px; font-family: "mont-reg";padding-bottom: 27px;
+	}
+	p{
+		font-family: "mont-med";
+		font-size: 20px;
+	}
+}
+.about{ position: relative; width: 100%;
+	h2{
+		font-size: 40px;font-family: "mont-reg";padding: 0px 0px 30px 0;
+	
+	}
+	p{
+		font-size: 18px;font-family: "mont-light";padding-top: 12px;padding-bottom: 62px;
+	}
+}
+
+.info{
+	font-family: "mont-light";
+	p{
+		font-family: "mont-med"; padding: 30px 0px;
+	}
+}
+.data-sets{
+	h3{
+		font-family: "mont-med";
+		font-size: 18px;
+		padding: 5px 0px 10px 0; 
+		line-height: 1.5em;
+	}
+	h2{
+		font-family: "mont-reg";
+        font-size: 20px;
+		padding: 10px 0px 30px 0;
+	}
+	p{
+		font-family: "mont-light";
+		font-size: 18px;
+		padding: 10px 0 30px 0;
+	}
+}
+
+.all-cards{ display: flex ; flex-wrap: wrap;
+
+	#car{
+		background-color: black;
+		width: 100%;
+		height: auto;
+		margin-bottom: 12px;
+		
+		.card-title{
+			color: white;
+			font-family: 'mont-med';
+			font-size: 51px;
+		}
+		.card-text{
+			color: white;
+			font-family: "mont-light";
+			padding: 9px;
+			font-size: 18px
+		
+		}
+	}
+}
+
+
+.vices{  margin: 20px 0;
+
+	.vices-inner{ margin-bottom: 30px; margin-top: 40px; 
+	h2{ font-size: 35px; color: grey; opacity: 0.7; margin-bottom: 20px;font-family: "mont-med"; }
+	h3{ margin-top: 30px; font-size: 24px;  padding-bottom: 10px;font-family: "mont-med"; }
+	p{ font-size: 16px;font-family: "mont-light";}
+	
+
+	}
+	.image{ 
+		img{ width: 100%;}
+	}
+
+}
+
+.projects{
+	.proj{ margin: 130px 0 40px 0;
+		h2{ font-size: 35px;font-family: "mont-med"; }
+		h4{ font-size: 28px; padding-top: 20px; padding-bottom: 15px;font-family: "mont-med"; }
+		p{ padding-bottom: 10px; font-size: 20px;font-family: "mont-light";}
+		
+		.line{ position: relative;
+		  a{ text-decoration:  none; color: black; font-size: 18px;font-family: "mont-light";}
+		  li{  margin-top: 5px; list-style: none; width: 175px; background-color: black; height: 2px;}
+		}
+		}
+
+		.img{ 
+			img{ width: 100%; margin-top: 102px;}
+		}
+}
+
+
+
+
+
+
+
+
+
+
+.in-touch{ margin-bottom: 60px;
+.in-touch-inner{ 
+	h2{font-size: 40px; margin-bottom: 20px; font-family: "mont-med"; }
+
+	.touch1{ 
+		p{ font-size: 20px;font-family: "mont-light";}
+		h4{ margin-top: 5px; font-size: 25px; margin-bottom: 30px; font-family: "mont-med";}
+	}
+
+	.touch2{ 
+		p{ font-size: 20px;font-family: "mont-light";}
+		h4{ margin-top: 5px; font-size: 25px; margin-bottom: 30px;font-family: "mont-med"; }
+	}
+
+	.touch3{ 
+		p{ font-size: 20px;font-family: "mont-light";}
+		li{ list-style: none; margin-top: 5px; font-size: 25px; margin-bottom: 30px;font-family: "mont-med"; }
+	}
+}
+
+
+.form{ width: 97%; 
+ h2{ font-size: 35px; margin-top: 5px; margin-bottom: 25px;font-family: "mont-med";}
+
+ form{font-family:"mont-light"; width: 100%; display: flex; flex-direction: column; 
+
+input{ border-top: none; border-left: none; border-right: none; margin-top: 16px; margin-bottom: 10px; padding-bottom: 30px; width: 100%;}
+textarea{ border-top: none; border-left: none; border-right: none; margin-top: 16px; margin-bottom: 10px; padding-bottom: 30px; width: 100%;}
+button{ background: grey; font-size: 20px; width: 100%; height: 40px; border: none; margin: 15px auto; &:hover{ background: cadetblue;}}
+ }
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer{  margin-top: 30px; width: 100%;
+.f-image{ width: 55%;  margin: 0 auto; left: 25%; 
+img{ width: 64%;    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+  }}
+
+.foot{ width: 100%;
+ul{ display: flex; padding-bottom: 25px; margin: 0 auto; justify-content: center; width: 100%; 
+li{ text-decoration: none; padding: 3px;
+a{ font-size: 20px ; text-decoration: none; color: black;}  
+}
+}
+}
+.logo-f{
+	padding-top: 12px;
+}
+}
+
+
+
+
+@media(min-width:568px){
+	.logo{
+width: 24%;
+	}
+	.text{
+		bottom: 53px;
+	}
+	header{
+		.hamburger{
+			top: -31px;
+		}
+	}
+
+
+
+
+
+
+	footer{ display: flex; justify-content: center; margin: 0 auto; align-items: center;
+	.f-image{ width: 30%; 
+	img{ width: 100%;}
+	}
+
+	.foot{ 
+		ul{ width: 100%; padding-top:10px  ; justify-content: space-evenly;
+		li{ 
+			a{font-family: "mont-reg"; font-size: 20px; justify-content: space-evenly;}
+		}
+		}
+	}
+	}
+}
+
+
+
+
+
+
+
+
+@media(min-width:768px){
+	.logo{
+		width: 29%;
+	}
+	.text{
+		padding: 0px 72px 23px 70px;
+
+		bottom: 237px;
+		h1{
+			font-size: 81px;
+		}
+		p{
+			font-size: 32px;
+			width: 70%;
+		}
+	}
+	.hero{
+		height: 85vh;
+		#vid{
+			height: 80vh;
+		}
+	}
+
+	.all-cards{
+		#car{width: 90%;
+		margin-left: 20px;
+		}
+	}
+
+}
+
+
+
+@media(min-width:992px) {
+	.logo{
+		width: 20%;
+		height: auto;
+	}
+	.text{
+		.text {
+			bottom: 276px;
+		}
+		h1{
+			font-size: 60px;
+		}
+		p{
+			font-size: 30px;
+		}
+	}
+
+	
+}
+
+
+
+
+
+
+@media(min-width:1200px){
+	.text{
+		width: 65%;
+		 padding: 100px 50px 277px 100px;bottom:13px;
+		p{
+			font-size: 20px;
+			font-family: "mont-med";
+		}
+		h1{
+			font-size: 60px;
+		}
+	}
+	.logo{
+		width: 15%;
+		// padding: 0px 78px 0px 12px;
+		bottom: -184px;
+		margin-right: 77px;
+	}
+	
+
+.hero{
+	height: 100vh;
+	#vid{
+		height: 100vh;
+	}
+	.logo{ bottom: 40px;}
+}
+.h-about{
+	padding: 285px 45px 0px 11px;
+}
+.info{
+	padding-top: 105px;
+	
+}
+.about{
+	h2{
+		padding: 43px 0px 18px 0;
+	}
+}
+
+}
